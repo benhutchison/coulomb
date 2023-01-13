@@ -267,6 +267,7 @@ class JavaTimeSuite extends CoulombSuite:
         import coulomb.units.javatime.conversions.explicit.given
 
         val et = (-165L).withEpochTime[Day]
+        (-165L).withEpochTime[Milli * Second].toInstant
         assertEquals(et.toInstant.toString, "1969-07-20T00:00:00Z")
     }
 
